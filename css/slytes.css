@@ -49,7 +49,6 @@ align-items: center;
 .header-nav-menu {
 display: flex;
 gap: 40px;
-
 margin-right: auto;
    
 }
@@ -167,6 +166,7 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 transition: background-color var(--transition-timing-function);
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
 }
 .hero-btn:focus,
@@ -241,6 +241,7 @@ margin-bottom: 72px;
 }
 .about-us-item {
 width: calc((100% - 48px) / 3);
+border: 1px solid #E7E9FC;
 }
 .about-us-list{
 display: flex;
@@ -304,9 +305,7 @@ margin-bottom: 8px;
     transition: backgraund-color var(--transition-timing-function)
     
 }
-{
 
-}
 .soc-link-footer:focus,
 .soc-link-footer:hover {
     background-color: #31D0AA;
@@ -329,6 +328,7 @@ color: var(--main-text-color);
 .our-people{
 background-color: var(--background-color);
 border-radius: 0px 0px 4px 4px;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .customers-title {
     font-size: 36px;
@@ -378,8 +378,7 @@ padding: 100px 0;
 }
 .footer-container{
 display: flex;
-gap: 120px;
-align-items: auto;
+align-items: baseline;
 }
 .soc-footer{
     display: inline;
@@ -404,7 +403,9 @@ text-transform: uppercase;
 letter-spacing: 0.03em;
 color: var(--logo-color);  
 }
-    
+.footer-text-logo{
+    margin-right: 120px;
+}
 .footer-text {
 font-size: 16px;
 line-height: 1.5;
@@ -513,4 +514,43 @@ width: calc((100% - 48px)/3);
     border-left: 1px solid #E7E9FC;
     border-bottom: 1px solid #E7E9FC;
     border-right: 1px solid #E7E9FC;
+ }
+ .backdrop{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    position: fixed;
+    top: 0;
+    transition: opacity var(--transition-timing-function),
+    visibility var(--transition-timing-function);
+
+ }
+ .modal{
+    width: 408px;
+    min-height: 584px;
+    background-color: #FCFCFC;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%) scale(1);
+ }
+ .modal-btn{
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: #E7E9FC;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    right: 24px;
+    top:24px;
+ }
+ .is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+ }
+ .backdrop.is-hidden .modal{
+    transform: translate(-50%,-50%) scate(0);
  }
