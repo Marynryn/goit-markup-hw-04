@@ -306,8 +306,7 @@ margin-bottom: 8px;
     align-items: center;
     gap: 24px;
 }
-.soc-link,
-.soc-link-footer
+.soc-link
 {
    display:flex;
     justify-content: center;
@@ -317,8 +316,18 @@ margin-bottom: 8px;
     border-radius: 50%;
     fill: var(--footer-text-color);
     background-color: var(--logo-color);
-    transition: backgraund-color var(--transition-timing-function);
-    
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.soc-link-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    fill: var(--footer-text-color);
+    background-color: var(--logo-color);
+    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-icons-list{
     width: 40px;
@@ -333,7 +342,7 @@ width: 24px;
 height: 24px;
 }
 .soc-link:hover,
-.soc-link:fosuc {
+.soc-link:focus {
 background-color: var(--button-color);
 }
    
@@ -367,8 +376,6 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     height: 88px;
     width: calc((100%-120px)/6);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
-   
      
 }
 .customers-link{
@@ -387,6 +394,7 @@ color: #8E8F99;
 .customers-link:focus{
 color: var(--button-color);
 border: 1px solid var(--button-color);
+
 }
 .cos-icons{
     fill: currentColor;
